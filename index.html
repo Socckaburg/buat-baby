@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Romantic Web</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= PAGE 1 ================= -->
+<section id="page1">
+  <h1>this one for you my baby</h1>
+  <p>web ini aku buat kamu sayang, karna aku sayang banget sama kamu</p>
+  
+  <button onclick="showPage('page2')">
+    <img src="img/icon1.png" alt="gift" width="80">
+  </button>
+  
+  <button onclick="playMusic()">
+    <img src="img/icon2.png" alt="play music" width="80">
+  </button>
+</section>
+
+<!-- ================= PAGE 2 ================= -->
+<section id="page2">
+  <h2>Pilih Icon</h2>
+  <button onclick="showPage('page3')">
+    <img src="img/icon1.png" width="100">
+  </button>
+  <button onclick="showPage('page4')">
+    <img src="img/icon2.png" width="100">
+  </button>
+</section>
+
+<!-- ================= PAGE 3 ================= -->
+<section id="page3">
+  <h2>Our Memories</h2>
+  <div class="photos">
+    <img src="img/photo1.jpg" onclick="viewPhoto('img/photo1.jpg')">
+    <img src="img/photo2.jpg" onclick="viewPhoto('img/photo2.jpg')">
+    <img src="img/photo3.jpg" onclick="viewPhoto('img/photo3.jpg')">
+    <img src="img/photo4.jpg" onclick="viewPhoto('img/photo4.jpg')">
+    <img src="img/photo5.jpg" onclick="viewPhoto('img/photo5.jpg')">
+  </div>
+  <button onclick="showPage('page2')">Back</button>
+</section>
+
+<!-- ================= PAGE 4 ================= -->
+<section id="page4">
+  <h2>Pesan Puitis</h2>
+  <p>
+    Selama 3 tahun kita bersama, aku minta maaf atas semua kesalahan...
+    aku akan terus berjuang untuk kamu dan janji tidak akan menyia-nyiakannya lagi.
+  </p>
+  
+  <p>Kamu masih sayang aku ga?</p>
+  <button id="yesBtn" onclick="handleYesNo('yes')">Yes</button>
+  <button onclick="handleYesNo('no')">No</button>
+  <p id="finalMessage"></p>
+</section>
+
+<!-- ================= MODAL FOTO ================= -->
+<div id="photoModal">
+  <img id="modalImg">
+  <button onclick="closeModal()">Back</button>
+</div>
+
+<!-- ================= MUSIK ================= -->
+<audio id="bgMusic" src="img/always.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
