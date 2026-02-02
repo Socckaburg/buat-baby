@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b1e4a url('img/bg.png') repeat; /* biru gelap + motif bunga */
+  color: white;
+  text-align: center;
+}
+
+/* PAGE SEMUA SECTION DISSEMBUNYIKAN KECUALI ACTIVE */
+section {
+  display: none;
+  padding: 20px;
+}
+
+/* tombol */
+button {
+  background: #1e90ff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* foto page3 */
+.photos {
+  position: relative;
+  height: 500px;
+}
+
+.photos img {
+  position: absolute;
+  width: 120px;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+/* buat foto melayang unik */
+.photos img:nth-child(1) { top: 10px; left: 50px; transform: rotate(-10deg);}
+.photos img:nth-child(2) { top: 80px; left: 200px; transform: rotate(15deg);}
+.photos img:nth-child(3) { top: 150px; left: 80px; transform: rotate(-20deg);}
+.photos img:nth-child(4) { top: 250px; left: 180px; transform: rotate(10deg);}
+.photos img:nth-child(5) { top: 320px; left: 120px; transform: rotate(-5deg);}
+
+/* modal */
+#photoModal {
+  display: none;
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#photoModal img {
+  max-width: 90%;
+  max-height: 90%;
+  margin-bottom: 20px;
+}
+
+#photoModal button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
